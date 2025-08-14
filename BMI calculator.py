@@ -14,12 +14,17 @@ def BMI_classification(BMI):
         return "obese!!"
     
 
-# Prompt the user to input their weight and height and print the result     
+# Prompt the user to input their weight and height and print the result   
+
+  
 def main():
-    weight = int(input("Enter weight in kgs: "))
-    height = float(input("Enter height in m: "))
-    BMI = weight / (height**2)
-    print(f"Your BMI is {BMI:.2f} and you are {BMI_classification(BMI)}")
-            
+    try:
+        weight = int(input("Enter weight in kgs: "))
+        height = float(input("Enter height in m: "))
+        BMI = weight / (height**2)
+        print(f"Your BMI is {BMI:.2f} and you are {BMI_classification(BMI)}")
+
+    except ValueError: 
+        print("Input not understood")           
 
 main()
